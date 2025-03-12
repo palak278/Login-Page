@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffffff 50%, #7b61ff 50%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-white p-8 rounded-lg shadow-lg w-80">
+        <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+        <form id="loginForm">
+            <div class="mb-4">
+                <input type="email" id="email" placeholder="email address" class="w-full p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+            </div>
+            <div class="mb-6">
+                <input type="password" id="password" placeholder="password" class="w-full p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-purple-500 text-white py-2 px-6 rounded-full shadow-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-600">LOGIN</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const validEmail = 'palakrathore278@gmail.com';
+            const validPassword = 'password123';
+
+            if (email === validEmail && password === validPassword) {
+                window.location.href = 'landing.html';
+            } else {
+                alert('Invalid email or password');
+            }
+        });
+    </script>
+</body>
+</html>
