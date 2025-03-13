@@ -9,8 +9,15 @@
     <div class="text-center">
         <h1 class="text-4xl font-bold mb-4">Welcome to the Landing Page!</h1>
         <p class="text-lg mb-4">You have successfully logged in.</p>
-        <a href="https://docs.google.com/spreadsheets/d/1RunejLh2-h2SGOFMnRWrlAUp6TWFDd8WjHll1xdjBic/edit?gid=2027873087#gid=2027873087" class="text-blue-500 underline" target="_blank">View the Spreadsheet</a>
-        <iframe src="https://docs.google.com/spreadsheets/d/1RunejLh2-h2SGOFMnRWrlAUp6TWFDd8WjHll1xdjBic/edit?gid=2027873087#gid=2027873087" width="900" height="600" class="mt-4 border-0"></iframe>
+        <a href="https://docs.google.com/spreadsheets/d/128xZhBi0cF06MSLKd2yWyfHjsOiKd7_g1CVH-nxgZWQ/edit?gid=0#gid=0" class="text-blue-500 underline" target="_blank">View the Spreadsheet</a>
+        <iframe src="https://docs.google.com/spreadsheets/d/128xZhBi0cF06MSLKd2yWyfHjsOiKd7_g1CVH-nxgZWQ/edit?gid=0#gid=0" width="900" height="600" class="mt-4 border-0"></iframe>
+        <button id="downloadPdf" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded">Download as PDF</button>
     </div>
+    <script>
+        document.getElementById('downloadPdf').addEventListener('click', function() {
+            const pdfUrl = 'https://docs.google.com/spreadsheets/d/128xZhBi0YXLtr86gsBF7NPcfvr7ti3YpOXZi2QLpxKnpKr0/export?format=pdf';
+            window.open(pdfUrl, '_blank');
+        });
+    </script>
 </body>
 </html>
