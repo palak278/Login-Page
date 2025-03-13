@@ -19,7 +19,7 @@
         <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
         <form id="loginForm">
             <div class="mb-4">
-                <input type="email" id="email" placeholder="email address" class="w-full p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                <input type="text" id="rollNumber" placeholder="roll number" class="w-full p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600">
             </div>
             <div class="mb-6">
                 <input type="password" id="password" placeholder="password" class="w-full p-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-purple-600">
@@ -32,16 +32,21 @@
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            const email = document.getElementById('email').value;
+            const rollNumber = document.getElementById('rollNumber').value;
             const password = document.getElementById('password').value;
 
-            const validEmail = 'palakrathore278@gmail.com';
-            const validPassword = 'password123';
+            const validCredentials = {
+                '123456789': 'password123',
+                '987654321': 'password456',
+                '112233445': 'password789',
+                '556677889': 'password101',
+                '998877665': 'password202'
+            };
 
-            if (email === validEmail && password === validPassword) {
+            if (validCredentials[rollNumber] === password) {
                 window.location.href = 'landing.html';
             } else {
-                alert('Invalid email or password');
+                alert('Invalid roll number or password');
             }
         });
     </script>
